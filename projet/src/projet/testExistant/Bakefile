@@ -1,0 +1,16 @@
+# Déclaration des variables
+JAVAC = javac
+SRC = ./projet/build/projet
+CP = -classpath ./projet/build/projet
+
+# Compilation de Main
+Main.class : $(SRC)/Main.java Utils.class
+	$(JAVAC) $(CP) $(SRC)/Main.java
+
+# Compilation de Utils
+Utils.class : $(SRC)/Utils.java 
+	$(JAVAC) $(SRC)/Utils.java
+
+
+
+
